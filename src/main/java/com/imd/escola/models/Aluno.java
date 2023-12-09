@@ -13,7 +13,9 @@ public class Aluno {
 
     private String nome;
 
-    @ManyToMany(mappedBy = "alunos", cascade = CascadeType.ALL)
+    //@ManyToMany(mappedBy = "alunos", cascade = CascadeType.ALL)
+    @ManyToMany
+    @JoinTable(name="alunos_turmas",  joinColumns = @JoinColumn(name="aluno_fk"), inverseJoinColumns = @JoinColumn(name="turma_fk"))
     private List<Turma> turmas;
 
     // Getters e Setters

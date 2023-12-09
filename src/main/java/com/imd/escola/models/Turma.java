@@ -11,6 +11,9 @@ public class Turma {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    
+    private Long professorId;
+
     private String nome;
 
     @ManyToMany
