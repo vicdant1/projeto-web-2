@@ -27,7 +27,4 @@ public class Disciplina {
 
     @ManyToMany(mappedBy = "disciplinas", cascade = CascadeType.ALL)
     private List<Turma> turmas;
-
-
-
 }
